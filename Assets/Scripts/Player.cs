@@ -28,11 +28,7 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         // Movement
-        if (movement.x != 0 || movement.y != 0)
-        {
-            // rb.MovePosition(rb.position + movement * move_speed * Time.fixedDeltaTime);
-            rb.velocity = new Vector2(movement.x * move_speed, movement.y * move_speed);
-            Debug.Log("X: " + movement.x + "Y: " + movement.y);
-        }
+        rb.velocity = new Vector2(movement.x * move_speed, movement.y * move_speed);
+        Debug.Log("X: " + movement.x + "Y: " + movement.y);
     }
 }
