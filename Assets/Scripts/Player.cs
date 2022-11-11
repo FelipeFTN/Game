@@ -22,13 +22,11 @@ public class Player : MonoBehaviour
         // Input
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-
     }
 
     private void FixedUpdate()
     {
         // Movement
         rb.velocity = new Vector2(movement.x * move_speed, movement.y * move_speed);
-        Debug.Log("X: " + movement.x + "Y: " + movement.y);
     }
 }
