@@ -8,6 +8,7 @@
     ],
     "fileStates": {
     },
+    "last.imagePath": "C:/Users/FelipeFTN/GameJam/Assets/World",
     "map.height": 50,
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 12,
@@ -17,5 +18,10 @@
     ],
     "project": "TiledProject.tiled-project",
     "recentFiles": [
-    ]
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 12,
+        "width": 12
+    }
 }
