@@ -14,7 +14,7 @@ public class Health : MonoBehaviour
         {
             Debug.Log("You're Dead!");
         }
-
+        
         // Debug - Health Bar
         if (Input.GetKeyDown(KeyCode.E)) { TakeDamage(20); }
         if (Input.GetKeyDown(KeyCode.F)) { Healing(20); }
