@@ -3,10 +3,22 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "",
+    "activeFile": "World.tmx",
     "expandedProjectPaths": [
     ],
     "fileStates": {
+        "World.tmx": {
+            "scale": 3,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 272,
+                "y": 445.3333333333333
+            }
+        },
+        "WorldTileSet.tsx": {
+            "scaleInDock": 2,
+            "scaleInEditor": 1
+        }
     },
     "last.imagePath": "C:/Users/FelipeFTN/GameJam/Assets/World",
     "map.height": 50,
@@ -15,9 +27,13 @@
     "map.tileWidth": 12,
     "map.width": 50,
     "openFiles": [
+        "World.tmx",
+        "WorldTileSet.tsx"
     ],
     "project": "TiledProject.tiled-project",
     "recentFiles": [
+        "WorldTileSet.tsx",
+        "World.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
