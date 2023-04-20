@@ -1,5 +1,5 @@
 CC=g++
-BINARY=bin/MyGame
+BINARY=bin/Game
 CFLAGS= -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
 OBJECTS=src/main.o src/ball/ball.o src/map/map.o
 CFILES=src/main.cpp src/ball/ball.cpp src/map/map.cpp
