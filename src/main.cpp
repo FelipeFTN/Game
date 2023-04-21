@@ -21,6 +21,7 @@ int main() {
 
     map.Draw();
     ball.Draw();
+    ball.Move();
 
     EndDrawing();
   }
