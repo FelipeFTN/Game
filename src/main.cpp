@@ -3,7 +3,6 @@
 #include "map/map.h"
 
 int main() {
-
   const int screenWidth = 512;
   const int screenHeight = 512;
 

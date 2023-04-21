@@ -6,5 +6,5 @@ Ball::Ball(int sWidth, int sHeight) {
 }
 
 void Ball::Draw() {
-  DrawTexturePro(ball, sourceRec, destRec, origin, 0.f, WHITE);
+  DrawTextureRec(ball, ballRec, ballPos, WHITE);
 }

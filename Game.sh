@@ -1,1 +1,3 @@
-make && ./bin/Game
+make clean
+make
+./bin/Game
