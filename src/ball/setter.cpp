@@ -7,3 +7,7 @@ void Ball::SetPosition(Vector2 position) {
 void Ball::SetSpeed(Vector2 speed) {
   ballSpeed = {speed.x, speed.y};
 }
+
+void Ball::SetAcceleration(float acceleration) {
+  ballAcceleration = acceleration;
+}

@@ -11,7 +11,7 @@ int main() {
 
   Map map{};
   Ball ball_0{screenWidth, screenHeight, 50, 50, 0};
-  Ball ball_1{screenWidth, screenHeight, 250, 250, 1};
+  Ball ball_1{screenWidth, screenHeight, screenWidth - 75, screenHeight - 75, 1};
 
   SetTargetFPS(60);
 
@@ -19,17 +19,17 @@ int main() {
 
   while (!WindowShouldClose()) {
 
-    ball_0.Collision();
-    ball_1.Collision();
+    ball_0.Collision(ball_1);
+    ball_1.Collision(ball_0);
 
     BeginDrawing();
 
     map.Draw();
     ball_0.Draw();
-    ball_0.Move();
+    ball_0.Move(GetFrameTime());
 
     ball_1.Draw();
-    ball_1.Move();
+    ball_1.Move(GetFrameTime());
 
     EndDrawing();
   }

@@ -8,10 +8,22 @@ float Ball::GetY() {
   return ballPos.y;
 }
 
+float Ball::GetWidth() {
+  return ball.width;
+}
+
+float Ball::GetHeight() {
+  return ball.height;
+}
+
 Vector2 Ball::GetSpeed() {
   return ballSpeed;
 }
 
 Vector2 Ball::GetInitialPosition() {
   return ballInitialPos;
+}
+
+Rectangle Ball::GetCollisionRec() {
+  return Rectangle{GetX(), GetY(), GetWidth(), GetHeight()};
 }
