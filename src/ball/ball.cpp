@@ -31,7 +31,6 @@ void Ball::SetSpeed(Vector2 speed) {
 }
 
 void Ball::Collision() {
-    bool canCollide = true;
     float blockSpeed = 2.f;
 
     if(GetY() >= 110.f && GetY() <= screenHeight - 125.f) {
@@ -55,6 +54,9 @@ void Ball::Collision() {
       SetPosition(GetInitialPosition());
       SetSpeed(Vector2{0.f, 0.f});
     }
+
+    if(ballSpeed.x > 0.f && IsKeyUp(KEY_A) && IsKeyUp(KEY_D)) { ballSpeed.x -= 0.01f * ballSpeed.x; }
+    if(ballSpeed.y > 0.f && IsKeyUp(KEY_W) && IsKeyUp(KEY_S)) { ballSpeed.y -= 0.01f * ballSpeed.y; }
 }
 
 void Ball::SetPosition(Vector2 position) {

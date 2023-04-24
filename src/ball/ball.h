@@ -20,6 +20,7 @@ class Ball {
     Texture2D ball = LoadTexture("assets/ball.png");
     int screenWidth = 512;
     int screenHeight = 512;
+    bool canCollide = true;
     int ballWidth = ball.width;
     int ballHeight = ball.height;
     Vector2 ballInitialPos { 50, 50 };

@@ -2,7 +2,6 @@
 #include "map/map.h"
 #include "raylib.h"
 #include <string>
-#include <iostream>
 
 int main() {
   const int screenWidth = 512;
