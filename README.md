@@ -14,7 +14,7 @@ Game is a simple C++ game built using Raylib. It is a two-players game where the
 
 To install the game, follow these steps:
 
-Clone the repository to your local machine.<br>
+Clone the repository to your local machine or download the latest game version from the [releases page](https://github.com/FelipeFTN/Game/releases).<br>
 Open the project in your preferred C++ IDE.<br>
 Make sure you have the Raylib library installed on your machine.<br>
 Build and run the game.<br>
