@@ -1,8 +1,8 @@
 CC=g++
 BINARY=bin/Game
 CFLAGS= -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
-OBJECTS=src/main.o src/ball/ball.o src/map/map.o
-CFILES=src/main.cpp src/ball/ball.cpp src/map/map.cpp
+OBJECTS=src/main.o src/ball/ball.o src/ball/setter.o src/ball/getter.o src/map/map.o
+CFILES=src/main.cpp src/ball/ball.cpp src/ball/setter.cpp src/ball/getter.cpp src/map/map.cpp
 
 $(BINARY): $(OBJECTS)
 	mkdir -p bin/

@@ -1,8 +1,11 @@
+#ifndef BALL_H
+#define BALL_H
+
 #include "raylib.h"
 
 class Ball {
   public:
-    Ball(int sWidth, int sHeight);
+    Ball(int sWidth, int sHeight, int x, int y, int id);
     void Draw();
     void Move();
     void Collision();
@@ -18,6 +21,7 @@ class Ball {
 
   private:
     Texture2D ball = LoadTexture("assets/ball.png");
+    int id = 0;
     int screenWidth = 512;
     int screenHeight = 512;
     bool canCollide = true;
@@ -28,3 +32,4 @@ class Ball {
     Vector2 ballPos { 50, 50 };
     Rectangle ballRec {  0, 0, (float)ballWidth, (float)ballHeight };
 };
+#endif

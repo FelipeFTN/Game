@@ -10,7 +10,8 @@ int main() {
   InitWindow(screenWidth, screenHeight, "Game");
 
   Map map{};
-  Ball ball{screenWidth, screenHeight};
+  Ball ball_0{screenWidth, screenHeight, 50, 50, 0};
+  Ball ball_1{screenWidth, screenHeight, 250, 250, 1};
 
   SetTargetFPS(60);
 
@@ -18,13 +19,17 @@ int main() {
 
   while (!WindowShouldClose()) {
 
-    ball.Collision();
+    ball_0.Collision();
+    ball_1.Collision();
 
     BeginDrawing();
 
     map.Draw();
-    ball.Draw();
-    ball.Move();
+    ball_0.Draw();
+    ball_0.Move();
+
+    ball_1.Draw();
+    ball_1.Move();
 
     EndDrawing();
   }
