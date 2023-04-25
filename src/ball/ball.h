@@ -32,7 +32,6 @@ class Ball {
     Vector2 ballSpeed { 0.f, 0.f };
     float ballAcceleration = 13.0f;
     float stopDragSpeed = 0.01f;
-    float backSpeed = 2.f;
     Vector2 ballPos { 50, 50 };
     Rectangle ballRec { 0, 0, GetWidth(), GetHeight() };
 };
