@@ -44,8 +44,6 @@ void Ball::Move(float deltaTime) {
 
 void Ball::Collision(Ball *ball) {
   // Collisions againt walls
-  float backSpeed = 2.f;
-
   if(GetY() >= 110.f && GetY() <= screenHeight - 125.f) {
     canCollide = false;
   } else { canCollide = true; }
@@ -63,7 +61,11 @@ void Ball::Collision(Ball *ball) {
     SetSpeed(Vector2{GetSpeed().x - backSpeed * GetSpeed().x, GetSpeed().y});
   }
 
-  if(GetX() > screenWidth || GetX() < - 20) {
+  if(GetX() > screenHeight || GetX() < - 20) {
+    SetPosition(GetInitialPosition());
+    SetSpeed(Vector2{0.f, 0.f});
+  }
+  if(GetY() > screenHeight || GetY() < - 20) {
     SetPosition(GetInitialPosition());
     SetSpeed(Vector2{0.f, 0.f});
   }
@@ -74,8 +76,11 @@ void Ball::Collision(Ball *ball) {
   // Collisons again ball
   if(CheckCollisionRecs(GetCollisionRec(), ball->GetCollisionRec())) {
     if(GetY() + GetHeight() >= ball->GetY()) {
-      ball->SetSpeed(Vector2{ball->GetSpeed().x, ball->GetSpeed().y - GetSpeed().y });
-      SetSpeed(Vector2{GetSpeed().x, GetSpeed().y + GetSpeed().y});
+      ball->SetSpeed(Vector2{ball->GetSpeed().x, GetSpeed().y - ball->GetSpeed().y});
+      /* SetSpeed(Vector2{GetSpeed().x, GetSpeed().y - ball->GetSpeed().y}); */
+    } 
+    if(GetX() + GetWidth() >= ball->GetX()) {
+      ball->SetSpeed(Vector2{GetSpeed().x - ball->GetSpeed().x, ball->GetSpeed().y});
     }
   }
 }
