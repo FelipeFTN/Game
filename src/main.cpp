@@ -19,8 +19,8 @@ int main() {
 
   while (!WindowShouldClose()) {
 
-    ball_0.Collision(ball_1);
-    ball_1.Collision(ball_0);
+    ball_0.Collision(&ball_1);
+    ball_1.Collision(&ball_0);
 
     BeginDrawing();
 

@@ -8,16 +8,16 @@ class Ball {
     Ball(int sWidth, int sHeight, int x, int y, int id);
     void Draw();
     void Move(float deltaTime);
-    void Collision(Ball ball);
+    void Collision(Ball *ball);
 
     Vector2 GetInitialPosition();
     Rectangle GetCollisionRec();
-    float GetWidth();
+    Vector2 GetSpeed();
     float GetHeight();
+    float GetWidth();
     float GetX();
     float GetY();
 
-    Vector2 GetSpeed();
     void SetSpeed(Vector2 speed);
     void SetPosition(Vector2 position);
     void SetAcceleration(float acceleration);
@@ -31,6 +31,7 @@ class Ball {
     Vector2 ballInitialPos { 50, 50 };
     Vector2 ballSpeed { 0.f, 0.f };
     float ballAcceleration = 10.0f;
+    float stopDragSpeed = 0.01f;
     Vector2 ballPos { 50, 50 };
     Rectangle ballRec { 0, 0, GetWidth(), GetHeight() };
 };
