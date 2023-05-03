@@ -3,3 +3,9 @@ bin/
 
 # Ignore .o files
 **/*.o
+
+# Ignore libs
+lib/*.so.**
+lib/*.so
+lib/*.a
+lib/*.h
