@@ -1,4 +1,4 @@
-# Game
+# Game (with no name)
 
 Game is a simple C++ game built using Raylib. It is a two-players game where the players controls a ball and has the objective to remove the other player from the field.<br>
 <img src="assets/game.png" width="200" height="200">
@@ -12,12 +12,29 @@ Game is a simple C++ game built using Raylib. It is a two-players game where the
 
 ## Installation
 
+### Plug & Play (Recommended)
 To install the game, follow these steps:
 
-Clone the repository to your local machine or download the latest game version from the [releases page](https://github.com/FelipeFTN/Game/releases).<br>
-Open the project in your preferred C++ IDE.<br>
-Make sure you have the Raylib library installed on your machine.<br>
-Build and run the game.<br>
+1. Download the latest release of the game from the [releases page](https://github.com/FelipeFTN/Game/releases).<br>
+2. Extract the zip file in your machine.<br>
+3. Run the executable file generated _Game.exe_ or `$ ./Game` in case you downloaded the Linux or Mac version.<br>
+4. Enjoy!
+
+### Building by your own
+For this process to work, you will need a few tools, which you may already have, since this method is usually chosen by more advanced players.<br>
+Make sure you have [GNU Make](https://www.gnu.org/software/make/) and [GNU Compiler Collection](https://gcc.gnu.org/) (GCC & G++) installed in your computer.<br>
+All checked? Right, let's do it!<br>
+Just go over the Game's root directory and do on your terminal:
+```bash
+    ## Building from Makefile
+    $ make install && make
+```
+As simples as that, you can easily run your game with `$ ./bin/Game` or `sh Game.sh`.
+In case of any error, we highly recommend to export some libs to Path:
+```bash
+    $ export LD_LIBRARY_PATH=./lib/raylib/lib:$LD_LIBRARY_PATH
+```
+This should do it! Let us know in case of any error during your execution :)
 
 ## How to Play
 
