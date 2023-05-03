@@ -5,7 +5,5 @@ bin/
 **/*.o
 
 # Ignore libs
-lib/*.so.**
-lib/*.so
-lib/*.a
-lib/*.h
+lib/raylib/include
+lib/raylib/lib
