@@ -1,5 +1,6 @@
 # Ignore bin/ folder
 bin/
+obj/
 
 # Ignore .o files
 **/*.o
