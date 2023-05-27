@@ -1,9 +1,6 @@
 # Clear any previous installation
 make clean
 
-# Install dependencies
-make install
-
 # Compile the Game
 make
 

@@ -100,6 +100,8 @@ ifeq ($(UNAME), Linux)
 	cp --update --verbose ./lib/raylib/include/* /usr/local/include/
 	cp --update --verbose ./lib/raylib/lib/* /usr/local/lib/
 	@echo "dependencies installed!"
+	@echo "In order to apply the library, please, update your path:"
+	@echo "export LD_LIBRARY_PATH=./lib/raylib/lib:""$$""LD_LIBRARY_PATH"
 else
 	@echo "This function currently works on GNU/Linux systems."
 endif
