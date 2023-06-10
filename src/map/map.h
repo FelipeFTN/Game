@@ -5,7 +5,7 @@ public:
   Map();
 
 public:
-  void Draw();
+  void DrawMap();
   void Wall(Rectangle *wall, bool active);
   void HideWall(Rectangle *wall);
 

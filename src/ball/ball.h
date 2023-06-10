@@ -8,7 +8,7 @@ class Ball {
     Ball(int sWidth, int sHeight, int x, int y, int id);
     void Draw();
     void Move(float deltaTime);
-    void Collision(Ball *ball);
+    void Collision(Ball *ball, bool wall_0, bool wall_1);
 
     Vector2 GetInitialPosition();
     Rectangle GetCollisionRec();

@@ -4,7 +4,7 @@
 
 Map::Map() { }
 
-void Map::Draw() {
+void Map::DrawMap() {
   DrawTextureEx(background, (Vector2){ 0.0f, 0.0f }, 0.0f, 8.0f, WHITE);
 }
 
