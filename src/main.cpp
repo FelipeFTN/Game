@@ -10,6 +10,7 @@ int main() {
   InitWindow(screenWidth, screenHeight, "Game");
 
   Map map{};
+  int wallTime = 0;
   bool show_wall_0 = true;
   bool show_wall_1 = false;
   Rectangle wall_0{-84, 111, 100, screenHeight / 1.8f};
@@ -23,12 +24,14 @@ int main() {
 
   while (!WindowShouldClose()) {
 
+    map.WallControl(&wallTime, &show_wall_0, &show_wall_1);
+
     ball_0.Collision(&ball_1, show_wall_0, show_wall_1);
     ball_1.Collision(&ball_0, show_wall_0, show_wall_1);
 
     BeginDrawing();
 
-    map.DrawMap();
+    map.DrawMap(screenWidth, screenHeight);
     map.Wall(&wall_0, show_wall_0);
     map.Wall(&wall_1, show_wall_1);
 
