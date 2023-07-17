@@ -9,12 +9,14 @@ class Ball {
     void Draw();
     void Move(float deltaTime);
     void Collision(Ball *ball, bool wall_0, bool wall_1);
+    void DrawScore(int x, int y);
 
     Vector2 GetInitialPosition();
     Rectangle GetCollisionRec();
     Vector2 GetSpeed();
     float GetHeight();
     float GetWidth();
+    int GetScore();
     float GetX();
     float GetY();
 
@@ -34,5 +36,7 @@ class Ball {
     float stopDragSpeed = 0.01f;
     Vector2 ballPos { 50, 50 };
     Rectangle ballRec { 0, 0, GetWidth(), GetHeight() };
+    bool enabled = true;
+    int score = 3;
 };
 #endif

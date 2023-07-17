@@ -13,6 +13,11 @@ void Ball::Draw() {
   DrawTextureRec(ball, ballRec, ballPos, WHITE);
 }
 
+void Ball::DrawScore(int x, int y) {
+  if (score <= 0) { enabled = false; };
+  DrawText(std::to_string(score).c_str(), x, y, 40, GRAY);
+}
+
 void Ball::Move(float deltaTime) {
   // Movement
   ballPos.x += GetSpeed().x * deltaTime;
@@ -69,10 +74,12 @@ void Ball::Collision(Ball *ball, bool wall_0, bool wall_1) {
   if (GetX() > screenWidth || GetX() < - 20) {
     SetPosition(GetInitialPosition());
     SetSpeed(Vector2{0.f, 0.f});
+    score -= 1;
   }
   if (GetY() > screenHeight || GetY() < - 20) {
     SetPosition(GetInitialPosition());
     SetSpeed(Vector2{0.f, 0.f});
+    score -= 1;
   }
 
   if (GetSpeed().x > 0.f || GetSpeed().x < 0.f && IsKeyUp(KEY_A) && IsKeyUp(KEY_D)) { ballSpeed.x -= stopDragSpeed * GetSpeed().x; }

@@ -20,6 +20,10 @@ Vector2 Ball::GetSpeed() {
   return ballSpeed;
 }
 
+int Ball::GetScore() {
+  return score;
+}
+
 Vector2 Ball::GetInitialPosition() {
   return ballInitialPos;
 }
