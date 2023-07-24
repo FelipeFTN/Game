@@ -10,7 +10,13 @@ void Map::DrawMap(int screenWidth, int screenHeight) {
   DrawTextureEx(background, (Vector2){ 0.0f, 0.0f }, 0.0f, 8.0f, WHITE);
 }
 
-void Map::WallControl(int *wallTime, bool *show_wall_0, bool *show_wall_1) {
+void Map::WallControl(int *wallTime, bool *show_wall_0, bool *show_wall_1, bool gameover) {
+  if (gameover) {
+    *show_wall_0 = true;
+    *show_wall_1 = true;
+    return;
+  }
+
   *wallTime += 1;
   if (*wallTime == 600) {
     *show_wall_0 = *show_wall_0 ? false : true;

@@ -11,6 +11,7 @@ int main() {
 
   Map map{};
   int wallTime = 0;
+  bool gameover = false;
   bool show_wall_0 = true;
   bool show_wall_1 = false;
   Rectangle wall_0{-84, 111, 100, screenHeight / 1.8f};
@@ -24,7 +25,7 @@ int main() {
 
   while (!WindowShouldClose()) {
 
-    map.WallControl(&wallTime, &show_wall_0, &show_wall_1);
+    map.WallControl(&wallTime, &show_wall_0, &show_wall_1, gameover);
 
     ball_0.Collision(&ball_1, show_wall_0, show_wall_1);
     ball_1.Collision(&ball_0, show_wall_0, show_wall_1);
@@ -41,12 +42,18 @@ int main() {
     if (ball_0.GetScore() > 0) {
       ball_0.Draw();
       ball_0.Move(GetFrameTime());
-    } else { DrawText("Player 2 Won!", (screenWidth / 2) - 60, screenHeight / 2, 20, LIGHTGRAY); }
+    } else {
+      DrawText("Player 2 Won!", (screenWidth / 2) - 60, screenHeight / 2, 20, LIGHTGRAY);
+      gameover = true;
+    } 
 
     if (ball_1.GetScore() > 0) {
       ball_1.Draw();
       ball_1.Move(GetFrameTime());
-    } else { DrawText("Player 1 Won!", (screenWidth / 2) - 60, screenHeight / 2, 20, LIGHTGRAY); }
+    } else {
+      DrawText("Player 1 Won!", (screenWidth / 2) - 60, screenHeight / 2, 20, LIGHTGRAY);
+      gameover = true;
+    }
 
     EndDrawing();
   }
